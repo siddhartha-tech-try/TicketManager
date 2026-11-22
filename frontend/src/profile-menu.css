@@ -1,0 +1,111 @@
+.profile-menu-wrap {
+  position: relative;
+}
+
+/* Keep the dropdown above page cards and illustrations below the header. */
+.app-topbar {
+  position: relative;
+  z-index: 8;
+}
+
+.profile-trigger {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  transition: box-shadow 0.16s, transform 0.16s;
+}
+
+.profile-trigger:hover,
+.profile-trigger[aria-expanded='true'] {
+  box-shadow: 0 0 0 3px #dce7fb;
+  transform: translateY(-1px);
+}
+
+.profile-trigger:focus-visible {
+  outline: 2px solid #7397d0;
+  outline-offset: 3px;
+}
+
+.profile-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 11px);
+  right: 0;
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #e9ebf1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 16px 38px #293b5b20;
+  animation: profileMenuIn 0.14s ease-out;
+}
+
+.profile-menu-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px 12px;
+}
+
+.profile-menu-heading > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.profile-menu-heading strong {
+  overflow: hidden;
+  color: #465164;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-menu-heading small {
+  overflow: hidden;
+  color: #969eac;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-menu-role {
+  padding: 9px 9px 10px;
+  border-top: 1px solid #f0f1f4;
+  color: #929aa8;
+  font-size: 9px;
+}
+
+.profile-menu-logout {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 10px 9px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #b35750;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-menu-logout:hover {
+  background: #fff2f0;
+}
+
+.profile-menu-logout:focus-visible {
+  outline: 2px solid #d88b7e;
+  outline-offset: 1px;
+}
+
+.profile-menu-logout span {
+  font-size: 13px;
+}
+
+@keyframes profileMenuIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}

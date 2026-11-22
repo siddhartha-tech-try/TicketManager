@@ -1,0 +1,31 @@
+.progress-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: conic-gradient(
+    var(--progress-color, #7097d1) var(--progress, 0%),
+    var(--progress-track, #dce5f4) 0
+  );
+  transform: none;
+}
+
+.progress-ring::before {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: var(--progress-hole, #fff);
+  content: '';
+}
+
+.progress-ring > span {
+  position: relative;
+  z-index: 1;
+  transform: none;
+}
+
+.hero-progress .progress-ring {
+  --progress-color: #7397d0;
+  --progress-track: #dce5f4;
+  --progress-hole: #fff;
+}
